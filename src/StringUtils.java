@@ -7,9 +7,6 @@ public class StringUtils {
      * 7 characters. All should be lowercase.
      * Ex: a = "Sean ", b = "Flannery", returns "sflanner"
      */
-    public static void main(String[] args) {
-
-    }
 
     public static String makePurdueUsername(String firstName, String lastName) {
         /* Generate the long version of the name first:
@@ -21,12 +18,14 @@ public class StringUtils {
             Ex: res = "SFlannery"
                     --> res = "SFlanner"
          */
-        res.substring(0, 8);
+        if(res.length() > 8) {
+            res = res.substring(0, 8);
+        }
         /* Convert the name to lower-case
             Ex: res = "SFlanner"
                     --> res = "sflanner"
          */
-        res.toLowerCase();
+        res = res.toLowerCase();
         /* return the result of our calculation */
         return res;
     }
